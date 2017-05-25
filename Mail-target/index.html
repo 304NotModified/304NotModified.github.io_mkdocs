@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Mail target - NLog Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../AsyncWrapper-target/">NLog Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">targets <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AsyncWrapper-target/">AsyncWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../BufferingWrapper-target/">BufferingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Chainsaw-target/">Chainsaw target</a>
+</li>
+                            
+<li >
+    <a href="../ColoredConsole-target/">ColoredConsole target</a>
+</li>
+                            
+<li >
+    <a href="../Console-target/">Console target</a>
+</li>
+                            
+<li >
+    <a href="../Database-target/">Database target</a>
+</li>
+                            
+<li >
+    <a href="../Debug-target/">Debug target</a>
+</li>
+                            
+<li >
+    <a href="../Debugger-target/">Debugger target</a>
+</li>
+                            
+<li >
+    <a href="../Elmah-target/">Elmah target</a>
+</li>
+                            
+<li >
+    <a href="../Eventlog-target/">Eventlog target</a>
+</li>
+                            
+<li >
+    <a href="../FallbackGroup-target/">FallbackGroup target</a>
+</li>
+                            
+<li >
+    <a href="../File-target/">File target</a>
+</li>
+                            
+<li >
+    <a href="../FilteringWrapper-target/">FilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../FormControl-target/">FormControl target</a>
+</li>
+                            
+<li >
+    <a href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Installing-targets/">Installing targets</a>
+</li>
+                            
+<li >
+    <a href="../LimitingWrapper-target/">LimitingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../LogReceiverService-target/">LogReceiverService target</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Mail target</a>
+</li>
+                            
+<li >
+    <a href="../Memory-target/">Memory target</a>
+</li>
+                            
+<li >
+    <a href="../MessageBox-target/">MessageBox target</a>
+</li>
+                            
+<li >
+    <a href="../MethodCall-target/">MethodCall target</a>
+</li>
+                            
+<li >
+    <a href="../MSMQ-target/">MSMQ target</a>
+</li>
+                            
+<li >
+    <a href="../Network-target/">Network target</a>
+</li>
+                            
+<li >
+    <a href="../NLogViewer-target/">NLogViewer target</a>
+</li>
+                            
+<li >
+    <a href="../Null-target/">Null target</a>
+</li>
+                            
+<li >
+    <a href="../OutputDebugString-target/">OutputDebugString target</a>
+</li>
+                            
+<li >
+    <a href="../PerfCounter-target/">PerfCounter target</a>
+</li>
+                            
+<li >
+    <a href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RandomizeGroup-target/">RandomizeGroup target</a>
+</li>
+                            
+<li >
+    <a href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RetryingWrapper-target/">RetryingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RichTextBox-target/">RichTextBox target</a>
+</li>
+                            
+<li >
+    <a href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+</li>
+                            
+<li >
+    <a href="../SplitGroup-target/">SplitGroup target</a>
+</li>
+                            
+<li >
+    <a href="../Trace-target/">Trace target</a>
+</li>
+                            
+<li >
+    <a href="../WebService-target/">WebService target</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">renderers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Counter-layout-renderer/">Counter layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Date-layout-renderer/">Date layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Environment-layout-renderer/">Environment layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Exception-layout-renderer/">Exception layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gc-layout-renderer/">Gc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Guid-layout-renderer/">Guid layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Identity-layout-renderer/">Identity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Level-layout-renderer/">Level layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLog.Web <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AspApplication-layout-renderer/">AspApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSession-layout-renderer/">AspNetSession layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSessionId-layout-renderer/">AspNetSessionId layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserAuthType-layout-renderer/">AspNetUserAuthType layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserIdentity-layout-renderer/">AspNetUserIdentity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extending <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../How-to-write-a-custom-target/">How to write a custom target</a>
+</li>
+                            
+<li >
+    <a href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../LogReceiverService-target/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Memory-target/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-syntax">Configuration Syntax</a></li>
+        <li class="main "><a href="#parameters">Parameters</a></li>
+            <li><a href="#general-options">General Options</a></li>
+            <li><a href="#layout-options">Layout Options</a></li>
+            <li><a href="#message-options">Message Options</a></li>
+            <li><a href="#smtp-options">SMTP Options</a></li>
+        <li class="main "><a href="#remarks">Remarks</a></li>
+            <li><a href="#application-configuration-file">Application Configuration File</a></li>
+            <li><a href="#email-address-format">Email Address Format</a></li>
+            <li><a href="#mail-target-wrapped-by-fallbackgroup-target">Mail Target wrapped by FallbackGroup Target</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Sends log messages by email using SMTP protocol. </p>
+<p>Combines well with <a href="https://github.com/NLog/NLog/wiki/FallbackGroup-target">FallbackGroup Target</a> in order to create a fallback with multiple SMTP Hosts, example see <a href="https://github.com/NLog/NLog/wiki/Mail-target#mail-target-wrapped-by-fallbackgroup-target">here</a>.</p>
+<p>Supported in .NET and Mono</p>
+<h2 id="configuration-syntax">Configuration Syntax</h2>
+<pre><code class="xml">&lt;targets&gt;
+  &lt;target xsi:type=&quot;Mail&quot;
+          name=&quot;String&quot;
+          header=&quot;Layout&quot;
+          footer=&quot;Layout&quot;
+          layout=&quot;Layout&quot;
+          html=&quot;Boolean&quot;
+          addNewLines=&quot;Boolean&quot;
+          replaceNewlineWithBrTagInHtml=&quot;Boolean&quot;
+          encoding=&quot;Encoding&quot;
+          subject=&quot;Layout&quot;
+          to=&quot;Layout&quot;
+          bcc=&quot;Layout&quot;
+          cc=&quot;Layout&quot;
+          from=&quot;Layout&quot;
+          body=&quot;Layout&quot;
+          smtpUserName=&quot;Layout&quot;
+          enableSsl=&quot;Boolean&quot;
+          smtpPassword=&quot;Layout&quot;
+          smtpAuthentication=&quot;Enum&quot;
+          smtpServer=&quot;Layout&quot;
+          smtpPort=&quot;Integer&quot;
+          useSystemNetMailSettings=&quot;Boolean&quot;
+          deliveryMethod=&quot;Enum&quot;
+          pickupDirectoryLocation=&quot;String&quot;
+          timeout=&quot;Integer&quot; /&gt;
+&lt;/targets&gt;
+</code></pre>
+
+<p>Read more about using the [[Configuration File]].</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="general-options">General Options</h3>
+<ul>
+<li><strong>name</strong> - Name of the target.</li>
+</ul>
+<h3 id="layout-options">Layout Options</h3>
+<ul>
+<li>
+<p><strong>header</strong> - Header. <a href="../Data-types">Layout</a></p>
+</li>
+<li>
+<p><strong>footer</strong> - Footer. <a href="../Data-types">Layout</a></p>
+</li>
+<li>
+<p><strong>layout</strong> - Text to be rendered. <a href="../Data-types">Layout</a> Required. Default: <code>${message}${newline}</code>. Same as <em>body</em> property</p>
+</li>
+<li>
+<p><strong>html</strong> - Indicates whether to send message as HTML instead of plain text. <a href="../Data-types">Boolean</a> Default: <code>false</code></p>
+</li>
+<li>
+<p><strong>addNewLines</strong> - Indicates whether to add new lines between log entries. <a href="../Data-types">Boolean</a></p>
+</li>
+<li>
+<p><strong>replaceNewlineWithBrTagInHtml</strong> - Indicates whether NewLine characters in the body should be replaced with <code>&lt;br/&gt;</code> tags. <a href="../Data-types">Boolean</a> Default: <code>false</code></p>
+</li>
+<li>
+<p><strong>encoding</strong> - Encoding to be used for sending e-mail. <a href="../Data-types">Encoding</a> Default: <code>UTF-8</code></p>
+</li>
+</ul>
+<h3 id="message-options">Message Options</h3>
+<ul>
+<li>
+<p><strong>subject</strong> - Mail subject. <a href="../Data-types">Layout</a> Required. Default: Message from NLog on ${machinename}</p>
+</li>
+<li>
+<p><strong>to</strong> - Recipients' email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). <a href="../Data-types">Layout</a>. Starting in NLog 4.0 this field is no longer required, but To, BCC or CC should be defined otherwise an exception is thrown. </p>
+</li>
+<li>
+<p><strong>bcc</strong> - BCC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). <a href="../Data-types">Layout</a></p>
+</li>
+<li>
+<p><strong>cc</strong> - CC email addresses separated by semicolons (e.g. john@domain.com;jane@domain.com). <a href="../Data-types">Layout</a></p>
+</li>
+<li>
+<p><strong>from</strong> - Sender's email address (e.g. joe@domain.com). <a href="../Data-types">Layout</a> Required.</p>
+</li>
+<li>
+<p><strong>body</strong> - Same as <em>Layout</em> property. Mail message body (repeated for each log message send in one mail). <a href="../Data-types">Layout</a> Default: <code>${message}${newline}</code> </p>
+</li>
+</ul>
+<h3 id="smtp-options">SMTP Options</h3>
+<ul>
+<li>
+<p><strong>smtpUserName</strong> - Username used to connect to SMTP server (used when SmtpAuthentication is set to "basic"). <a href="../Data-types">Layout</a></p>
+</li>
+<li>
+<p><strong>enableSsl</strong> - Indicates whether SSL (secure sockets layer) should be used when communicating with SMTP server. <a href="../Data-types">Boolean</a> Default: False. Note: port 465 isn't working with SSL. See <a href="https://github.com/NLog/NLog/issues/1226">issue 1226</a>  </p>
+</li>
+<li>
+<p><strong>smtpPassword</strong> - Password used to authenticate against SMTP server (used when SmtpAuthentication is set to "basic"). <a href="../Data-types">Layout</a></p>
+</li>
+<li>
+<p><strong>smtpAuthentication</strong> - SMTP Authentication mode. Default: None<br />
+Possible values:</p>
+</li>
+<li><em>Basic</em> - Basic - username and password.</li>
+<li><em>None</em> - No authentication.</li>
+<li>
+<p><em>Ntlm</em> - NTLM Authentication.</p>
+</li>
+<li>
+<p><strong>smtpServer</strong> - SMTP Server to be used for sending. <a href="../Data-types">Layout</a> Required.</p>
+</li>
+<li>
+<p><strong>smtpPort</strong> - Port number that SMTP Server is listening on. <a href="../Data-types">Integer</a> Default: 25. Note: port 465 isn't working with SSL. See <a href="https://github.com/NLog/NLog/issues/1226">issue 1226</a></p>
+</li>
+<li>
+<p><strong>useSystemNetMailSettings</strong> - Force using smtp configuration from system.net/mailSettings. <a href="../Data-types">Boolean</a> Default: False</p>
+</li>
+<li>
+<p><strong>timeout</strong> - Indicates the SMTP client timeout in milliseconds. <a href="../Data-types">Integer</a> Default: 10000 (10 seconds)</p>
+</li>
+<li>
+<p><strong>pickupDirectoryLocation</strong> - Gets or sets the folder where applications save mail messages to be processed by the local SMTP server (<strong>introduced in NLog 4.2</strong>).</p>
+</li>
+<li>
+<p><strong>smtpDeliveryMethod</strong> - Specifies how outgoing email messages will be handled (<strong>introduced in NLog 4.2</strong>). Default: Network 
+Possible values:</p>
+</li>
+<li><em>Network</em> - Email is sent through the network to an SMTP server.</li>
+<li><em>PickupDirectoryFromIis</em> - Email is copied to the pickup directory used by a local Internet Information Services (IIS) for delivery.</li>
+<li><em>SpecifiedPickupDirectory</em> - Email is copied to the directory specified by the PickupDirectoryLocation property for delivery by an external application.</li>
+</ul>
+<h2 id="remarks">Remarks</h2>
+<h3 id="application-configuration-file">Application Configuration File</h3>
+<p>If the application config file contains mail settings, fx.:</p>
+<pre><code class="xml">&lt;system.net&gt;
+  &lt;mailSettings&gt;
+    &lt;smtp from=&quot;mail@domain.com&quot; deliveryMethod=&quot;SpecifiedPickupDirectory&quot;&gt;
+      &lt;network host=&quot;localhost&quot; port=&quot;25&quot;/&gt;
+      &lt;specifiedPickupDirectory pickupDirectoryLocation=&quot;C:/Temp/Email&quot;/&gt;
+    &lt;/smtp&gt;
+  &lt;/mailSettings&gt;
+&lt;/system.net&gt;
+</code></pre>
+
+<p>These values will be used, if target doesn't override them (see <em>useSystemNetMailSettings</em> attribute).</p>
+<h3 id="email-address-format">Email Address Format</h3>
+<p>It is possible to use an address in format "John Doe &lt;john.doe@example.com&gt;" but the special characters &lt; and &gt; must be escaped. The result would be <code>John Doe &amp;lt;john.doe@example.com&amp;gt;</code></p>
+<h3 id="mail-target-wrapped-by-fallbackgroup-target">Mail Target wrapped by <a href="https://github.com/NLog/NLog/wiki/FallbackGroup-target">FallbackGroup Target</a></h3>
+<p>Example configuration for a Mailserver Fallback with multiple hosts.</p>
+<pre><code class="xml">&lt;target xsi:type=&quot;FallbackGroup&quot; 
+        name=&quot;mail&quot;
+        returnToFirstOnSuccess=&quot;true&quot;&gt;
+    &lt;target xsi:type=&quot;Mail&quot;
+            name=&quot;mailserver1&quot;
+            subject=&quot;Layout&quot;
+            to=&quot;Layout&quot;
+            from=&quot;Layout&quot;
+            smtpServer=&quot;mx1.example.com&quot; 
+            smtpPort=&quot;Integer&quot;
+            layout=&quot;Layout&quot; /&gt;
+    &lt;target xsi:type=&quot;Mail&quot;
+            name=&quot;mailserver2&quot; 
+            subject=&quot;Layout&quot;
+            to=&quot;Layout&quot;
+            from=&quot;Layout&quot;
+            smtpServer=&quot;mx2.example.com&quot; 
+            smtpPort=&quot;Integer&quot;
+            layout=&quot;Layout&quot; /&gt;
+&lt;/target&gt;
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

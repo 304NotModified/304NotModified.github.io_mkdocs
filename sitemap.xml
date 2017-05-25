@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+        
+    <url>
+     <loc>/AsyncWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AutoFlushWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/BufferingWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Chainsaw-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ColoredConsole-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Console-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Database-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Debug-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Debugger-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Elmah-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Eventlog-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/FallbackGroup-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/File-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/FilteringWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/FormControl-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/ImpersonatingWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Installing-targets/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/LimitingWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/LogReceiverService-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Mail-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Memory-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/MessageBox-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/MethodCall-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/MSMQ-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Network-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/NLogViewer-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Null-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/OutputDebugString-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/PerfCounter-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/PostFilteringWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/RandomizeGroup-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/RepeatingWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/RetryingWrapper-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/RichTextBox-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/RoundRobinGroup-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/SplitGroup-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Trace-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/WebService-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/Basedir-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Callsite-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Callsite-line-number-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Counter-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Date-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/DocumentUri-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Environment-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Exception-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/FileContents-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Gc-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Gdc-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Guid-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Identity-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/InstallContext-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/Level-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/WrapLine-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/AspApplication-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetApplication-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetItem-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetRequest-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetSession-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetSessionId-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetUserAuthType-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspNetUserIdentity-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspRequest-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/AspSession-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/How-to-write-a-custom-target/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/How-to-write-a-custom-layout-renderer/</loc>
+     <lastmod>2017-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+</urlset>

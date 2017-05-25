@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Eventlog target - NLog Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../AsyncWrapper-target/">NLog Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">targets <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AsyncWrapper-target/">AsyncWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../BufferingWrapper-target/">BufferingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Chainsaw-target/">Chainsaw target</a>
+</li>
+                            
+<li >
+    <a href="../ColoredConsole-target/">ColoredConsole target</a>
+</li>
+                            
+<li >
+    <a href="../Console-target/">Console target</a>
+</li>
+                            
+<li >
+    <a href="../Database-target/">Database target</a>
+</li>
+                            
+<li >
+    <a href="../Debug-target/">Debug target</a>
+</li>
+                            
+<li >
+    <a href="../Debugger-target/">Debugger target</a>
+</li>
+                            
+<li >
+    <a href="../Elmah-target/">Elmah target</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Eventlog target</a>
+</li>
+                            
+<li >
+    <a href="../FallbackGroup-target/">FallbackGroup target</a>
+</li>
+                            
+<li >
+    <a href="../File-target/">File target</a>
+</li>
+                            
+<li >
+    <a href="../FilteringWrapper-target/">FilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../FormControl-target/">FormControl target</a>
+</li>
+                            
+<li >
+    <a href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Installing-targets/">Installing targets</a>
+</li>
+                            
+<li >
+    <a href="../LimitingWrapper-target/">LimitingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../LogReceiverService-target/">LogReceiverService target</a>
+</li>
+                            
+<li >
+    <a href="../Mail-target/">Mail target</a>
+</li>
+                            
+<li >
+    <a href="../Memory-target/">Memory target</a>
+</li>
+                            
+<li >
+    <a href="../MessageBox-target/">MessageBox target</a>
+</li>
+                            
+<li >
+    <a href="../MethodCall-target/">MethodCall target</a>
+</li>
+                            
+<li >
+    <a href="../MSMQ-target/">MSMQ target</a>
+</li>
+                            
+<li >
+    <a href="../Network-target/">Network target</a>
+</li>
+                            
+<li >
+    <a href="../NLogViewer-target/">NLogViewer target</a>
+</li>
+                            
+<li >
+    <a href="../Null-target/">Null target</a>
+</li>
+                            
+<li >
+    <a href="../OutputDebugString-target/">OutputDebugString target</a>
+</li>
+                            
+<li >
+    <a href="../PerfCounter-target/">PerfCounter target</a>
+</li>
+                            
+<li >
+    <a href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RandomizeGroup-target/">RandomizeGroup target</a>
+</li>
+                            
+<li >
+    <a href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RetryingWrapper-target/">RetryingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RichTextBox-target/">RichTextBox target</a>
+</li>
+                            
+<li >
+    <a href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+</li>
+                            
+<li >
+    <a href="../SplitGroup-target/">SplitGroup target</a>
+</li>
+                            
+<li >
+    <a href="../Trace-target/">Trace target</a>
+</li>
+                            
+<li >
+    <a href="../WebService-target/">WebService target</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">renderers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Counter-layout-renderer/">Counter layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Date-layout-renderer/">Date layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Environment-layout-renderer/">Environment layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Exception-layout-renderer/">Exception layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gc-layout-renderer/">Gc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Guid-layout-renderer/">Guid layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Identity-layout-renderer/">Identity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Level-layout-renderer/">Level layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLog.Web <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AspApplication-layout-renderer/">AspApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSession-layout-renderer/">AspNetSession layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSessionId-layout-renderer/">AspNetSessionId layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserAuthType-layout-renderer/">AspNetUserAuthType layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserIdentity-layout-renderer/">AspNetUserIdentity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extending <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../How-to-write-a-custom-target/">How to write a custom target</a>
+</li>
+                            
+<li >
+    <a href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../Elmah-target/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../FallbackGroup-target/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-syntax">Configuration Syntax</a></li>
+        <li class="main "><a href="#parameters">Parameters</a></li>
+            <li><a href="#general-options">General Options</a></li>
+            <li><a href="#layout-options">Layout Options</a></li>
+            <li><a href="#event-log-options">Event Log Options</a></li>
+        <li class="main "><a href="#notes">Notes</a></li>
+        <li class="main "><a href="#example">Example</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Writes log message to the Event Log. </p>
+<p>Supported in .NET and Mono</p>
+<h2 id="configuration-syntax">Configuration Syntax</h2>
+<pre><code class="xml">&lt;targets&gt;
+  &lt;target xsi:type=&quot;EventLog&quot;
+          name=&quot;String&quot;
+          layout=&quot;Layout&quot;
+          machineName=&quot;String&quot;
+          source=&quot;Layout&quot; 
+          category=&quot;Layout&quot;
+          eventId=&quot;Layout&quot;
+          log=&quot;String&quot;
+          maxMessageLength=&quot;Integer&quot; /&gt;
+&lt;!-- note: source is a string in NLog before 4.0 --&gt;
+&lt;/targets&gt;
+</code></pre>
+
+<p>Read more about using the [[Configuration File]].</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="general-options">General Options</h3>
+<ul>
+<li><strong>name</strong> - Name of the target.</li>
+</ul>
+<h3 id="layout-options">Layout Options</h3>
+<ul>
+<li><strong>layout</strong> - Layout used to format log messages. <a href="../Layouts">Layout</a> Required. Default: <code>${longdate}|${level:uppercase=true}|${logger}|${message}</code>. Note: max size of 16384 characters (limitation of the <code>EventLog</code> API)</li>
+</ul>
+<h3 id="event-log-options">Event Log Options</h3>
+<ul>
+<li><strong>machineName</strong> - Name of the machine on which Event Log service is running. Default: <code>.</code>  </li>
+<li><strong>source</strong> - Value to be used as the event Source. By default this is the friendly name of the current AppDomain. From NLog 4.0 this is layoutable(Layouts). </li>
+<li><strong>category</strong> - <a href="../Layouts">Layout</a> that renders event Category.  The categories must be predefined for the specified <em>source</em> and needs to be numeric.   </li>
+<li><strong>eventId</strong> - <a href="../Layouts">Layout</a> that renders event ID. </li>
+<li><strong>log</strong> - Name of the Event Log to write to. This can be System, Application or any user-defined name. Default: Application</li>
+<li><strong>MaxMessageLength</strong> - The message length limit to write to the Event Log. There are <a href="https://support.microsoft.com/en-us/kb/957662" title="Recommended settings for event log sizes in Windows">various message length limit that depends on the OS.</a> Therefore, be careful for the value. Default: 16,384. If given value is zero or negative, then Exception will throw. Introduced in NLog 4.3.</li>
+<li><strong>onOverflow</strong> - Action to take when a log message is larger than the <em>MaxMessageLength</em> option. Available actions are:</li>
+<li><em>Truncate</em> - Truncates the message before writing to the Event Log. This is the default.</li>
+<li><em>Split</em> - Splits the message and writes multiple entries to the Event Log. Warning: the message layout will be spread across multiple Event Log entries; if there is an application reading and parsing the Event Log, split messages will not have the expected layout of a log entry.</li>
+<li><em>Discard</em> - Discards of the message. It will not be written to the Event Log.</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>To log to the event log, an event source is required to exist. This involves creating the event source.</p>
+<p>When install/uninstalling, the event source is only created / removed when the <em>source</em> doesn't contain layout renderers.</p>
+<p>When installing, the event source can only be created when run as an Administrator. Alternatively a simple PowerShell command to create this source is shown below (run PowerShell as Administrator).</p>
+<pre><code>New-EventLog -LogName Application -Source "MySourceName"
+</code></pre>
+<p>The Event Log has a limit in the number of bytes in a message. From <a href="https://msdn.microsoft.com/en-us/library/xzwc042w(v=vs.110).aspx#Anchor_1">MSDN</a>:</p>
+<blockquote>
+<p>The message string is longer than 31,839 bytes (32,766 bytes on Windows operating systems before Windows Vista).</p>
+</blockquote>
+<h2 id="example">Example</h2>
+<pre><code class="xml">&lt;target xsi:type=&quot;EventLog&quot;
+            name=&quot;eventlog&quot;
+            source=&quot;test&quot;
+            layout=&quot;${message}${newline}${exception:format=ToString}&quot;/&gt;
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

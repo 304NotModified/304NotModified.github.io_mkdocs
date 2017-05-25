@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>ColoredConsole target - NLog Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../AsyncWrapper-target/">NLog Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">targets <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AsyncWrapper-target/">AsyncWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../BufferingWrapper-target/">BufferingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Chainsaw-target/">Chainsaw target</a>
+</li>
+                            
+<li class="active">
+    <a href="./">ColoredConsole target</a>
+</li>
+                            
+<li >
+    <a href="../Console-target/">Console target</a>
+</li>
+                            
+<li >
+    <a href="../Database-target/">Database target</a>
+</li>
+                            
+<li >
+    <a href="../Debug-target/">Debug target</a>
+</li>
+                            
+<li >
+    <a href="../Debugger-target/">Debugger target</a>
+</li>
+                            
+<li >
+    <a href="../Elmah-target/">Elmah target</a>
+</li>
+                            
+<li >
+    <a href="../Eventlog-target/">Eventlog target</a>
+</li>
+                            
+<li >
+    <a href="../FallbackGroup-target/">FallbackGroup target</a>
+</li>
+                            
+<li >
+    <a href="../File-target/">File target</a>
+</li>
+                            
+<li >
+    <a href="../FilteringWrapper-target/">FilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../FormControl-target/">FormControl target</a>
+</li>
+                            
+<li >
+    <a href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Installing-targets/">Installing targets</a>
+</li>
+                            
+<li >
+    <a href="../LimitingWrapper-target/">LimitingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../LogReceiverService-target/">LogReceiverService target</a>
+</li>
+                            
+<li >
+    <a href="../Mail-target/">Mail target</a>
+</li>
+                            
+<li >
+    <a href="../Memory-target/">Memory target</a>
+</li>
+                            
+<li >
+    <a href="../MessageBox-target/">MessageBox target</a>
+</li>
+                            
+<li >
+    <a href="../MethodCall-target/">MethodCall target</a>
+</li>
+                            
+<li >
+    <a href="../MSMQ-target/">MSMQ target</a>
+</li>
+                            
+<li >
+    <a href="../Network-target/">Network target</a>
+</li>
+                            
+<li >
+    <a href="../NLogViewer-target/">NLogViewer target</a>
+</li>
+                            
+<li >
+    <a href="../Null-target/">Null target</a>
+</li>
+                            
+<li >
+    <a href="../OutputDebugString-target/">OutputDebugString target</a>
+</li>
+                            
+<li >
+    <a href="../PerfCounter-target/">PerfCounter target</a>
+</li>
+                            
+<li >
+    <a href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RandomizeGroup-target/">RandomizeGroup target</a>
+</li>
+                            
+<li >
+    <a href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RetryingWrapper-target/">RetryingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RichTextBox-target/">RichTextBox target</a>
+</li>
+                            
+<li >
+    <a href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+</li>
+                            
+<li >
+    <a href="../SplitGroup-target/">SplitGroup target</a>
+</li>
+                            
+<li >
+    <a href="../Trace-target/">Trace target</a>
+</li>
+                            
+<li >
+    <a href="../WebService-target/">WebService target</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">renderers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Counter-layout-renderer/">Counter layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Date-layout-renderer/">Date layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Environment-layout-renderer/">Environment layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Exception-layout-renderer/">Exception layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gc-layout-renderer/">Gc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Guid-layout-renderer/">Guid layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Identity-layout-renderer/">Identity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Level-layout-renderer/">Level layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLog.Web <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AspApplication-layout-renderer/">AspApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSession-layout-renderer/">AspNetSession layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSessionId-layout-renderer/">AspNetSessionId layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserAuthType-layout-renderer/">AspNetUserAuthType layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserIdentity-layout-renderer/">AspNetUserIdentity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extending <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../How-to-write-a-custom-target/">How to write a custom target</a>
+</li>
+                            
+<li >
+    <a href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../Chainsaw-target/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Console-target/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-syntax">Configuration Syntax</a></li>
+        <li class="main "><a href="#parameters">Parameters</a></li>
+            <li><a href="#general-options">General Options</a></li>
+            <li><a href="#layout-options">Layout Options</a></li>
+            <li><a href="#highlighting-rules">Highlighting Rules</a></li>
+            <li><a href="#output-options">Output Options</a></li>
+            <li><a href="#programmatic-example">Programmatic example</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Writes log messages to the console with customizable coloring. </p>
+<p>Supported in .NET and Mono</p>
+<h2 id="configuration-syntax">Configuration Syntax</h2>
+<pre><code class="xml">&lt;targets&gt;
+  &lt;target xsi:type=&quot;ColoredConsole&quot;
+          name=&quot;String&quot;
+          encoding=&quot;Encoding&quot;
+          layout=&quot;Layout&quot;
+          header=&quot;Layout&quot;
+          footer=&quot;Layout&quot;
+          useDefaultRowHighlightingRules=&quot;Boolean&quot;
+          errorStream=&quot;Boolean&quot;
+          detectConsoleAvailable=&quot;Boolean&quot;&gt;
+    &lt;highlight-row backgroundColor=&quot;Enum&quot; condition=&quot;Condition&quot; foregroundColor=&quot;Enum&quot;/&gt;&lt;!-- repeated --&gt;
+    &lt;highlight-word backgroundColor=&quot;Enum&quot; foregroundColor=&quot;Enum&quot; ignoreCase=&quot;Boolean&quot;
+                    regex=&quot;String&quot; text=&quot;String&quot; wholeWords=&quot;Boolean&quot; compileRegex=&quot;Boolean&quot;/&gt;&lt;!-- repeated --&gt;
+  &lt;/target&gt;
+&lt;/targets&gt;
+</code></pre>
+
+<p>Read more about using the [[Configuration File]].</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="general-options">General Options</h3>
+<ul>
+<li>
+<p><strong>name</strong> - Name of the target.</p>
+</li>
+<li>
+<p><strong>encoding</strong> - File encoding name like "utf-8", "ascii" or "utf-16". See <a href="http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx">Encoding class on MSDN</a>. Defaults to <code>Encoding.Default</code> (<code>UTF-8</code> on silverlight). Starting for NLog 4.0.</p>
+</li>
+</ul>
+<h3 id="layout-options">Layout Options</h3>
+<ul>
+<li><strong>layout</strong> - Text to be rendered. <a href="../Layout">Layout</a> Required. Default: <code>${longdate}|${level:uppercase=true}|${logger}|${message}</code></li>
+<li><strong>header</strong> - Header. <a href="../Layout">Layout</a>  </li>
+<li><strong>footer</strong> - Footer. <a href="../Layout">Layout</a></li>
+</ul>
+<h3 id="highlighting-rules">Highlighting Rules</h3>
+<ul>
+<li>
+<p><strong>useDefaultRowHighlightingRules</strong> - Indicates whether to use default row highlighting rules. <a href="../Data types">Boolean</a> Default: True
+The default rules are:
+<table>
+<thead>
+<th>Condition</th><th>Foreground Color</th><th>Background Color</th>
+</thead>
+<tbody>
+<tr><td>level == LogLevel.Fatal</td><td>Red</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Error</td><td>Yellow</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Warn</td><td>Magenta</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Info</td><td>White</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Debug</td><td>Gray</td><td>NoChange</td></tr>
+<tr><td>level == LogLevel.Trace</td><td>DarkGray</td><td>NoChange</td></tr>
+</tbody>
+</table></p>
+</li>
+<li>
+<p><strong>rowHighlightingRules</strong> - The row highlighting rules. <a href="../Data types">Collection</a><br />
+Each collection item is represented by \<highlight-row /> element with the following attributes:</p>
+</li>
+<li>
+<p><strong>backgroundColor</strong> - Background color. Default: NoChange<br />
+Possible values:</p>
+<ul>
+<li>Black - Black Color (#000000).</li>
+<li>Blue - Blue Color (#0000FF).</li>
+<li>Cyan - Cyan Color (#00FFFF).</li>
+<li>DarkBlue - Dark blue Color (#000080).</li>
+<li>DarkCyan - Dark Cyan Color (#008080).</li>
+<li>DarkGray - Dark Gray Color (#808080).</li>
+<li>DarkGreen - Dark green Color (#008000).</li>
+<li>DarkMagenta - Dark Magenta Color (#800080).</li>
+<li>DarkRed - Dark Red Color (#800000).</li>
+<li>DarkYellow - Dark Yellow Color (#808000).</li>
+<li>Gray - Gray Color (#C0C0C0).</li>
+<li>Green - Green Color (#00FF00).</li>
+<li>Magenta - Magenta Color (#FF00FF).</li>
+<li>NoChange - Don't change the color.</li>
+<li>Red - Red Color (#FF0000).</li>
+<li>White - White Color (#FFFFFF).</li>
+<li>Yellow - Yellow Color (#FFFF00).</li>
+</ul>
+</li>
+<li>
+<p><strong>condition</strong> - Condition that must be met in order to set the specified foreground and background color. <a href="../Conditions">Condition</a> Required.  </p>
+</li>
+<li>
+<p><strong>foregroundColor</strong> - Foreground color. Default: NoChange<br />
+Possible values:</p>
+<ul>
+<li>Black - Black Color (#000000).</li>
+<li>Blue - Blue Color (#0000FF).</li>
+<li>Cyan - Cyan Color (#00FFFF).</li>
+<li>DarkBlue - Dark blue Color (#000080).</li>
+<li>DarkCyan - Dark Cyan Color (#008080).</li>
+<li>DarkGray - Dark Gray Color (#808080).</li>
+<li>DarkGreen - Dark green Color (#008000).</li>
+<li>DarkMagenta - Dark Magenta Color (#800080).</li>
+<li>DarkRed - Dark Red Color (#800000).</li>
+<li>DarkYellow - Dark Yellow Color (#808000).</li>
+<li>Gray - Gray Color (#C0C0C0).</li>
+<li>Green - Green Color (#00FF00).</li>
+<li>Magenta - Magenta Color (#FF00FF).</li>
+<li>NoChange - Don't change the color.</li>
+<li>Red - Red Color (#FF0000).</li>
+<li>White - White Color (#FFFFFF).</li>
+<li>Yellow - Yellow Color (#FFFF00).</li>
+</ul>
+</li>
+<li>
+<p><strong>wordHighlightingRules</strong> - The word highlighting rules. <a href="../Data types">Collection</a><br />
+Each collection item is represented by \<highlight-word /> element with the following attributes:</p>
+</li>
+<li>
+<p><strong>backgroundColor</strong> - Background color. Default: NoChange<br />
+  Possible values:</p>
+<ul>
+<li>Black - Black Color (#000000).</li>
+<li>Blue - Blue Color (#0000FF).</li>
+<li>Cyan - Cyan Color (#00FFFF).</li>
+<li>DarkBlue - Dark blue Color (#000080).</li>
+<li>DarkCyan - Dark Cyan Color (#008080).</li>
+<li>DarkGray - Dark Gray Color (#808080).</li>
+<li>DarkGreen - Dark green Color (#008000).</li>
+<li>DarkMagenta - Dark Magenta Color (#800080).</li>
+<li>DarkRed - Dark Red Color (#800000).</li>
+<li>DarkYellow - Dark Yellow Color (#808000).</li>
+<li>Gray - Gray Color (#C0C0C0).</li>
+<li>Green - Green Color (#00FF00).</li>
+<li>Magenta - Magenta Color (#FF00FF).</li>
+<li>NoChange - Don't change the color.</li>
+<li>Red - Red Color (#FF0000).</li>
+<li>White - White Color (#FFFFFF).</li>
+<li>Yellow - Yellow Color (#FFFF00).</li>
+</ul>
+</li>
+<li>
+<p><strong>foregroundColor</strong> - Foreground color. Default: NoChange<br />
+  Possible values:</p>
+<ul>
+<li>Black - Black Color (#000000).</li>
+<li>Blue - Blue Color (#0000FF).</li>
+<li>Cyan - Cyan Color (#00FFFF).</li>
+<li>DarkBlue - Dark blue Color (#000080).</li>
+<li>DarkCyan - Dark Cyan Color (#008080).</li>
+<li>DarkGray - Dark Gray Color (#808080).</li>
+<li>DarkGreen - Dark green Color (#008000).</li>
+<li>DarkMagenta - Dark Magenta Color (#800080).</li>
+<li>DarkRed - Dark Red Color (#800000).</li>
+<li>DarkYellow - Dark Yellow Color (#808000).</li>
+<li>Gray - Gray Color (#C0C0C0).</li>
+<li>Green - Green Color (#00FF00).</li>
+<li>Magenta - Magenta Color (#FF00FF).</li>
+<li>NoChange - Don't change the color.</li>
+<li>Red - Red Color (#FF0000).</li>
+<li>White - White Color (#FFFFFF).</li>
+<li>Yellow - Yellow Color (#FFFF00).</li>
+</ul>
+</li>
+<li>
+<p><strong>ignoreCase</strong> - Indicates whether to ignore case when comparing texts. <a href="../Data types">Boolean</a>  Default: <code>false</code> </p>
+</li>
+<li><strong>regex</strong> - Regular expression to be matched. You must specify either text or regex.  </li>
+<li><strong>text</strong> - Text to be matched. You must specify either text or regex.  </li>
+<li><strong>wholeWords</strong> - Indicates whether to match whole words only. <a href="../Data types">Boolean</a> Default: <code>false</code>  </li>
+<li><strong>compileRegex</strong> - Introduced in NLog 4.3. Compiles the Regex. If <code>false</code>, the regex cache is used. Setting this to <code>true</code> can improve performance, but costs memory. Default: <code>false</code> </li>
+</ul>
+<h3 id="output-options">Output Options</h3>
+<ul>
+<li>
+<p><strong>errorStream</strong> - Indicates whether the error stream (stderr) should be used instead of the output stream (stdout). <a href="../Data types">Boolean</a> Default: False</p>
+</li>
+<li>
+<p><strong>detectConsoleAvailable</strong> - Indicates whether the console target should disable itself when no console detected. Boolean Default: <code>false</code> (introduced in 4.3.10 with default: <code>true</code>. Since NLog 4.4 default <code>false</code>)</p>
+</li>
+</ul>
+<h3 id="programmatic-example">Programmatic example</h3>
+<pre><code>var consoleTarget = new ColoredConsoleTarget();
+
+var highlightRule = new ConsoleRowHighlightingRule();
+highlightRule.Condition = ConditionParser.ParseExpression("level == LogLevel.Info");
+highlightRule.ForegroundColor = ConsoleOutputColor.Green;
+consoleTarget.RowHighlightingRules.Add(highlightRule);
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

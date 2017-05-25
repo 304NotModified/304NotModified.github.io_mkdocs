@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>AsyncWrapper target - NLog Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./">NLog Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">targets <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li class="active">
+    <a href="./">AsyncWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../BufferingWrapper-target/">BufferingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Chainsaw-target/">Chainsaw target</a>
+</li>
+                            
+<li >
+    <a href="../ColoredConsole-target/">ColoredConsole target</a>
+</li>
+                            
+<li >
+    <a href="../Console-target/">Console target</a>
+</li>
+                            
+<li >
+    <a href="../Database-target/">Database target</a>
+</li>
+                            
+<li >
+    <a href="../Debug-target/">Debug target</a>
+</li>
+                            
+<li >
+    <a href="../Debugger-target/">Debugger target</a>
+</li>
+                            
+<li >
+    <a href="../Elmah-target/">Elmah target</a>
+</li>
+                            
+<li >
+    <a href="../Eventlog-target/">Eventlog target</a>
+</li>
+                            
+<li >
+    <a href="../FallbackGroup-target/">FallbackGroup target</a>
+</li>
+                            
+<li >
+    <a href="../File-target/">File target</a>
+</li>
+                            
+<li >
+    <a href="../FilteringWrapper-target/">FilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../FormControl-target/">FormControl target</a>
+</li>
+                            
+<li >
+    <a href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Installing-targets/">Installing targets</a>
+</li>
+                            
+<li >
+    <a href="../LimitingWrapper-target/">LimitingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../LogReceiverService-target/">LogReceiverService target</a>
+</li>
+                            
+<li >
+    <a href="../Mail-target/">Mail target</a>
+</li>
+                            
+<li >
+    <a href="../Memory-target/">Memory target</a>
+</li>
+                            
+<li >
+    <a href="../MessageBox-target/">MessageBox target</a>
+</li>
+                            
+<li >
+    <a href="../MethodCall-target/">MethodCall target</a>
+</li>
+                            
+<li >
+    <a href="../MSMQ-target/">MSMQ target</a>
+</li>
+                            
+<li >
+    <a href="../Network-target/">Network target</a>
+</li>
+                            
+<li >
+    <a href="../NLogViewer-target/">NLogViewer target</a>
+</li>
+                            
+<li >
+    <a href="../Null-target/">Null target</a>
+</li>
+                            
+<li >
+    <a href="../OutputDebugString-target/">OutputDebugString target</a>
+</li>
+                            
+<li >
+    <a href="../PerfCounter-target/">PerfCounter target</a>
+</li>
+                            
+<li >
+    <a href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RandomizeGroup-target/">RandomizeGroup target</a>
+</li>
+                            
+<li >
+    <a href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RetryingWrapper-target/">RetryingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RichTextBox-target/">RichTextBox target</a>
+</li>
+                            
+<li >
+    <a href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+</li>
+                            
+<li >
+    <a href="../SplitGroup-target/">SplitGroup target</a>
+</li>
+                            
+<li >
+    <a href="../Trace-target/">Trace target</a>
+</li>
+                            
+<li >
+    <a href="../WebService-target/">WebService target</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">renderers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Counter-layout-renderer/">Counter layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Date-layout-renderer/">Date layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Environment-layout-renderer/">Environment layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Exception-layout-renderer/">Exception layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gc-layout-renderer/">Gc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Guid-layout-renderer/">Guid layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Identity-layout-renderer/">Identity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Level-layout-renderer/">Level layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLog.Web <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AspApplication-layout-renderer/">AspApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSession-layout-renderer/">AspNetSession layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSessionId-layout-renderer/">AspNetSessionId layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserAuthType-layout-renderer/">AspNetUserAuthType layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserIdentity-layout-renderer/">AspNetUserIdentity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extending <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../How-to-write-a-custom-target/">How to write a custom target</a>
+</li>
+                            
+<li >
+    <a href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../AutoFlushWrapper-target/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-syntax">Configuration Syntax</a></li>
+        <li class="main "><a href="#parameters">Parameters</a></li>
+            <li><a href="#general-options">General Options</a></li>
+            <li><a href="#buffering-options">Buffering Options</a></li>
+        <li class="main "><a href="#remarks">Remarks</a></li>
+            <li><a href="#async-attribute">Async attribute</a></li>
+            <li><a href="#asyncwrapper-and-rules">AsyncWrapper and &lt;rules&gt;</a></li>
+            <li><a href="#async-attribute-and-asyncwrapper">Async attribute and AsyncWrapper</a></li>
+            <li><a href="#async-attribute-will-discard-by-default">Async attribute will discard by default</a></li>
+            <li><a href="#asynchronously-writing-and-threads">Asynchronously writing and threads</a></li>
+            <li><a href="#bufferingwrapper-and-async">BufferingWrapper and Async</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Provides asynchronous, buffered execution of target writes. </p>
+<p>Supported in .NET, Silverlight, Compact Framework and Mono.</p>
+<h2 id="configuration-syntax">Configuration Syntax</h2>
+<pre><code class="xml">&lt;targets&gt;
+  &lt;target xsi:type=&quot;AsyncWrapper&quot;
+          name=&quot;String&quot;
+          queueLimit=&quot;Integer&quot;
+          timeToSleepBetweenBatches=&quot;Integer&quot;
+          batchSize=&quot;Integer&quot;
+          overflowAction=&quot;Enum&quot;&gt;
+    &lt;target xsi:type=&quot;wrappedTargetType&quot; ...target properties... /&gt;
+  &lt;/target&gt;
+&lt;/targets&gt;
+</code></pre>
+
+<h2 id="parameters">Parameters</h2>
+<h3 id="general-options">General Options</h3>
+<ul>
+<li><strong>name</strong> - Name of the target.</li>
+</ul>
+<h3 id="buffering-options">Buffering Options</h3>
+<ul>
+<li>
+<p><strong>queueLimit</strong> - Limit on the number of requests in the lazy writer thread request queue. Integer Default: <code>10000</code></p>
+</li>
+<li>
+<p><strong>timeToSleepBetweenBatches</strong> - Time in milliseconds to sleep between batches. Integer Default: <code>50</code>. When set to <code>0</code>, then it will only trigger timer when something is logged (Less timer activity when idle, Faster logging and improved garbage collection behavior).</p>
+</li>
+<li>
+<p><strong>batchSize</strong> - Number of log events that should be processed in a batch by the lazy writer thread. Integer Default: 100 (NLog 4.4.2 and newer has Default: 200)</p>
+</li>
+<li>
+<p><strong>fullBatchSizeWriteLimit</strong> - Max number of consecutive full <em>batchSize</em> writes to perform within the same timer event. Integer Default: 5. Introduced in NLog 4.4.2</p>
+</li>
+<li>
+<p><strong>overflowAction</strong> - Action to be taken when the lazy writer thread request queue count exceeds the set limit. Default: Discard<br />
+Possible values:  </p>
+</li>
+<li>Block - Block until there's more room in the queue.  </li>
+<li>Discard - Discard the overflowing item.</li>
+<li>
+<p>Grow - Grow the queue.</p>
+</li>
+<li>
+<p><strong>optimizeBufferReuse</strong> - Instead of allocating new buffers for every <em>batchSize</em> write, then it reuse the same buffer. This means that the wrapped target no longer can take ownership of the buffers. All targets in the NLog package supports this mode. It is enabled automatically if the wrapped target has enabled <em>optimizeBufferReuse</em>. Introduced in NLog 4.4.2</p>
+</li>
+</ul>
+<h2 id="remarks">Remarks</h2>
+<h3 id="async-attribute">Async attribute</h3>
+<p>Asynchronous target wrapper allows the logger code to execute more quickly, by queuing messages and processing them in a separate thread. You should wrap targets that spend a non-trivial amount of time in their <code>Write()</code> method with asynchronous target to speed up logging. Because asynchronous logging is quite a common scenario, NLog supports a shorthand notation for wrapping all targets with AsyncWrapper. Just add <code>async="true"</code> to the <code>&lt;targets/&gt;</code> element in the configuration file.</p>
+<p>Example:</p>
+<pre><code class="xml">&lt;targets async=&quot;true&quot;&gt; 
+  ... your targets go here ...
+&lt;/targets&gt;
+</code></pre>
+
+<h3 id="asyncwrapper-and-rules">AsyncWrapper and <code>&lt;rules&gt;</code></h3>
+<p>When using the <code>AsyncWrapper</code>, do write to the wrapper in your <code>&lt;rules&gt;</code> section! In the following example: do write to 
+"target2". If the <code>&lt;logger&gt;</code> is writing to "target1", the messages are not written asynchronously!</p>
+<pre><code class="xml">   &lt;targets&gt;
+      &lt;target name=&quot;target2&quot; xsi:type=&quot;AsyncWrapper&quot;&gt;
+        &lt;target name =&quot;target1&quot; xsi:type=&quot;File&quot;
+                    fileName=&quot;c:/temp/test.log&quot; layout=&quot;${message}&quot;
+                    keepFileOpen=&quot;true&quot; /&gt;
+      &lt;/target&gt;
+    &lt;rules&gt;
+      &lt;logger name=&quot;*&quot; minlevel=&quot;Info&quot; writeTo=&quot;target2&quot;/&gt;
+    &lt;/rules&gt;
+  &lt;/targets&gt; 
+</code></pre>
+
+<h3 id="async-attribute-and-asyncwrapper">Async attribute and AsyncWrapper</h3>
+<p>Don't combine the Async attribute and AsyncWrapper. This will only slow down processing and will behave unreliably.</p>
+<h3 id="async-attribute-will-discard-by-default">Async attribute will discard by default</h3>
+<p>The async attribute is a shorthand for:</p>
+<pre><code class="xml">xsi:type=&quot;AsyncWrapper overflowAction=&quot;Discard&quot; queueLimit=&quot;10000&quot; batchSize=&quot;100&quot; timeToSleepBetweenBatches=&quot;50&quot;
+</code></pre>
+
+<p>So if you write a lot of messages (more then 10000) in a short time, it's possible that messages will be lost. This is intended behavior as keeping all the messages or waiting for all the messages to be written, could have impact on the performance of your program.</p>
+<p>If you need all the log messages, do use the AsyncWrapper instead of the async attribute. </p>
+<h3 id="asynchronously-writing-and-threads">Asynchronously writing and threads</h3>
+<p>When messages are written asynchronously, this is done in another thread. Some targets require to write on the main thread and so if asynchronous writing is used, the message get lost.</p>
+<h3 id="bufferingwrapper-and-async">BufferingWrapper and Async</h3>
+<p>The <a href="https://github.com/NLog/NLog/wiki/BufferingWrapper-target">BufferingWrapper</a> can write asynchronously by itself. No need to use the async attribute or AsyncWrapper. See <a href="https://github.com/NLog/NLog/wiki/BufferingWrapper-target#buffer-and-asynchronously-writing">remarks at the BufferingWrapper</a>.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

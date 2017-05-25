@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Database target - NLog Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../AsyncWrapper-target/">NLog Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">targets <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AsyncWrapper-target/">AsyncWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../BufferingWrapper-target/">BufferingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Chainsaw-target/">Chainsaw target</a>
+</li>
+                            
+<li >
+    <a href="../ColoredConsole-target/">ColoredConsole target</a>
+</li>
+                            
+<li >
+    <a href="../Console-target/">Console target</a>
+</li>
+                            
+<li class="active">
+    <a href="./">Database target</a>
+</li>
+                            
+<li >
+    <a href="../Debug-target/">Debug target</a>
+</li>
+                            
+<li >
+    <a href="../Debugger-target/">Debugger target</a>
+</li>
+                            
+<li >
+    <a href="../Elmah-target/">Elmah target</a>
+</li>
+                            
+<li >
+    <a href="../Eventlog-target/">Eventlog target</a>
+</li>
+                            
+<li >
+    <a href="../FallbackGroup-target/">FallbackGroup target</a>
+</li>
+                            
+<li >
+    <a href="../File-target/">File target</a>
+</li>
+                            
+<li >
+    <a href="../FilteringWrapper-target/">FilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../FormControl-target/">FormControl target</a>
+</li>
+                            
+<li >
+    <a href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Installing-targets/">Installing targets</a>
+</li>
+                            
+<li >
+    <a href="../LimitingWrapper-target/">LimitingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../LogReceiverService-target/">LogReceiverService target</a>
+</li>
+                            
+<li >
+    <a href="../Mail-target/">Mail target</a>
+</li>
+                            
+<li >
+    <a href="../Memory-target/">Memory target</a>
+</li>
+                            
+<li >
+    <a href="../MessageBox-target/">MessageBox target</a>
+</li>
+                            
+<li >
+    <a href="../MethodCall-target/">MethodCall target</a>
+</li>
+                            
+<li >
+    <a href="../MSMQ-target/">MSMQ target</a>
+</li>
+                            
+<li >
+    <a href="../Network-target/">Network target</a>
+</li>
+                            
+<li >
+    <a href="../NLogViewer-target/">NLogViewer target</a>
+</li>
+                            
+<li >
+    <a href="../Null-target/">Null target</a>
+</li>
+                            
+<li >
+    <a href="../OutputDebugString-target/">OutputDebugString target</a>
+</li>
+                            
+<li >
+    <a href="../PerfCounter-target/">PerfCounter target</a>
+</li>
+                            
+<li >
+    <a href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RandomizeGroup-target/">RandomizeGroup target</a>
+</li>
+                            
+<li >
+    <a href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RetryingWrapper-target/">RetryingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RichTextBox-target/">RichTextBox target</a>
+</li>
+                            
+<li >
+    <a href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+</li>
+                            
+<li >
+    <a href="../SplitGroup-target/">SplitGroup target</a>
+</li>
+                            
+<li >
+    <a href="../Trace-target/">Trace target</a>
+</li>
+                            
+<li >
+    <a href="../WebService-target/">WebService target</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">renderers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Counter-layout-renderer/">Counter layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Date-layout-renderer/">Date layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Environment-layout-renderer/">Environment layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Exception-layout-renderer/">Exception layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gc-layout-renderer/">Gc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Guid-layout-renderer/">Guid layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Identity-layout-renderer/">Identity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Level-layout-renderer/">Level layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLog.Web <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AspApplication-layout-renderer/">AspApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSession-layout-renderer/">AspNetSession layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSessionId-layout-renderer/">AspNetSessionId layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserAuthType-layout-renderer/">AspNetUserAuthType layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserIdentity-layout-renderer/">AspNetUserIdentity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extending <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../How-to-write-a-custom-target/">How to write a custom target</a>
+</li>
+                            
+<li >
+    <a href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../Console-target/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../Debug-target/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-syntax">Configuration Syntax</a></li>
+        <li class="main "><a href="#parameters">Parameters</a></li>
+            <li><a href="#general-options">General Options</a></li>
+            <li><a href="#connection-options">Connection Options</a></li>
+            <li><a href="#installation-options">Installation Options</a></li>
+            <li><a href="#sql-statement">SQL Statement</a></li>
+        <li class="main "><a href="#example-configurations">Example Configurations</a></li>
+            <li><a href="#sql-server-and-aspnet-example-configuration">SQL Server and ASP.NET Example Configuration</a></li>
+            <li><a href="#aspnet-and-sql-server-using-a-stored-procedure">ASP.NET and SQL Server using a stored procedure</a></li>
+            <li><a href="#mysql-and-net-core">MySql and .NET Core</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Writes log messages to the database using an ADO.NET provider. The database operation is always executed outside of a transaction.</p>
+<p>Supported in .NET, Compact Framework and Mono</p>
+<h2 id="configuration-syntax">Configuration Syntax</h2>
+<pre><code class="xml">&lt;targets&gt;
+  &lt;target xsi:type=&quot;Database&quot;
+          name=&quot;String&quot;
+          dbUserName=&quot;Layout&quot;
+          dbProvider=&quot;String&quot;
+          useTransactions=&quot;Boolean&quot;
+          connectionStringName=&quot;String&quot;
+          connectionString=&quot;Layout&quot;
+          keepConnection=&quot;Boolean&quot;
+          dbDatabase=&quot;Layout&quot;
+          dbPassword=&quot;Layout&quot;
+          dbHost=&quot;Layout&quot;
+          installConnectionString=&quot;Layout&quot;
+          commandText=&quot;Layout&quot;&gt;
+    &lt;install-command commandType=&quot;Enum&quot; connectionString=&quot;Layout&quot; ignoreFailures=&quot;Boolean&quot;
+                 text=&quot;Layout&quot;/&gt;&lt;!-- repeated --&gt;
+    &lt;uninstall-command commandType=&quot;Enum&quot; connectionString=&quot;Layout&quot; ignoreFailures=&quot;Boolean&quot;
+                   text=&quot;Layout&quot;/&gt;&lt;!-- repeated --&gt;
+    &lt;parameter layout=&quot;Layout&quot; name=&quot;String&quot; precision=&quot;Byte&quot;
+         scale=&quot;Byte&quot; size=&quot;Integer&quot;/&gt;&lt;!-- repeated --&gt;
+  &lt;/target&gt;
+&lt;/targets&gt;
+</code></pre>
+
+<p>Read more about using the [[Configuration File]].</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="general-options">General Options</h3>
+<ul>
+<li><strong>name</strong> - Name of the target.</li>
+</ul>
+<h3 id="connection-options">Connection Options</h3>
+<ul>
+<li>
+<p><strong>dbUserName</strong> - Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string. <a href="../Layout">Layout</a>  </p>
+</li>
+<li>
+<p><strong>dbProvider</strong> - Name of the database provider. Required. Default: sqlserver<br />
+The parameter name should be a provider invariant name as registered in machine.config or app.config. Common values are:</p>
+</li>
+<li>System.Data.SqlClient -</li>
+<li>System.Data.SqlServerCe.3.5 -</li>
+<li>System.Data.OracleClient - (deprecated in .NET Framework 4)</li>
+<li>Oracle.DataAccess.Client -</li>
+<li>System.Data.SQLite -</li>
+<li>Npgsql -</li>
+<li>
+<p>MySql.Data.MySqlClient -</p>
+<blockquote>
+<p>(Note that provider invariant names are not supported on .NET Compact Framework). Alternatively the parameter value &gt; can be be a fully qualified name of the provider connection type (class implementing IDbConnection) or one of the
+following tokens:
+ * sqlserver, mssql, microsoft or msde - SQL Server Data Provider
+ * oledb - OLEDB Data Provider
+ * odbc - ODBC Data Provider</p>
+<p>Example of using a fully qualified name with Mono.Data.Sqlite</p>
+<p>dbProvider="Mono.Data.Sqlite.SqliteConnection, Mono.Data.Sqlite, Version=4.0.0.0, Culture=neutral,
+PublicKeyToken=0738eb9f132ed756"</p>
+</blockquote>
+</li>
+<li>
+<p><strong>useTransactions</strong> - This option was removed in NLog 4.0 because the logging code always runs outside of transaction. This ensures that the log gets written to the database if you rollback the main transaction because of an error and want to log the error.</p>
+</li>
+<li>
+<p><strong>connectionStringName</strong> - Name of the connection string. The ProviderName of the connectionstring will be used to determine the SQL type. Since NLog 4.3 this  ProviderName attribute isn't required anymore and the <code>dbProvider</code> will be used as fallback.</p>
+</li>
+<li>
+<p><strong>connectionString</strong> - Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase and DBProvider. <a href="../Layout">Layout</a>  </p>
+</li>
+<li>
+<p><strong>keepConnection</strong> - Indicates whether to keep the database connection open between the log events. <a href="../Data types">Boolean</a> Default: <code>false</code>  </p>
+</li>
+<li>
+<p><strong>dbDatabase</strong> - Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string. <a href="../Data types">Layout</a>  </p>
+</li>
+<li>
+<p>*<em>dbPassword</em>' - Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string. <a href="../Data types">Layout</a>  </p>
+</li>
+<li>
+<p>*<em>dbHost</em> - Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string. <a href="../Data types">Layout</a>  </p>
+</li>
+</ul>
+<h3 id="installation-options">Installation Options</h3>
+<p>See  <a href="../Installing-targets">Installing targets</a>.</p>
+<p><em>installDdlCommands</em> - The installation DDL commands. <a href="../Data types">Collection</a>  . 
+Each collection item is represented by \<install-command /> element with the following attributes:
+  * <em>commandType</em> - Type of the command. Required. Default: <code>text</code><br />
+Possible values:
+    * StoredProcedure -
+    * TableDirect -
+    * Text -
+  * <em>connectionString</em> - Connection string to run the command against. If not provided, connection string from the target is used. <a href="../Data types">Layout</a><br />
+  * <em>ignoreFailures</em> - Indicates whether to ignore failures. <a href="../Data types">Boolean</a><br />
+  * <em>parameters</em> - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. <a href="../Data types">Collection</a><br />
+Each collection item is represented by <parameter /> element with the following attributes:
+    * <em>layout</em> - Layout that should be use to calcuate the value for the parameter. <a href="../Data types">Layout</a> Required.
+    * <em>name</em> - Database parameter name. Required.
+    * <em>precision</em> - Database parameter precision. <a href="../Data types">Byte</a> Default: 0
+    * <em>scale</em> - Database parameter scale. <a href="../Data types">Byte</a> Default: 0
+    * <em>size</em> - Database parameter size. <a href="../Data types">Integer</a> Default: 0
+    * <em>text</em> - Command text. <a href="../Data types">Layout</a> Required.<br />
+    * <em>installConnectionString</em> - Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used. <a href="../Layout">Layout</a><br />
+    * <em>uninstallDdlCommands</em> - The uninstallation DDL commands. <a href="../Data types">Collection</a><br />
+Each collection item is represented by \<uninstall-command /> element with the following attributes:
+      * <em>commandType</em> - Type of the command. Required. Default: <code>text</code> 
+Possible values:
+        * <code>StoredProcedure</code> - <code>commandText</code> is the stored procedure name.
+        * <code>TableDirect</code> -
+        * <code>Text</code> - regular query
+      * <em>connectionString</em> - Connection string to run the command against. If not provided, connection string from the target is used. <a href="../Layout">Layout</a><br />
+      * <em>ignoreFailures</em> - Indicates whether to ignore failures. <a href="../Layout">Boolean</a><br />
+      * <em>parameters</em> - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. <a href="../Layout">Collection</a><br />
+Each collection item is represented by \<parameter /> element with the following attributes:
+        * <em>layout</em> - Layout that should be use to calcuate the value for the parameter. <a href="../Layout">Layout</a> Required.
+        * <em>name</em> - Database parameter name. Required.
+        * <em>precision</em> - Database parameter precision. <a href="../Data types">Byte</a> Default: 0
+        * <em>scale</em> - Database parameter scale. <a href="../Data types">Byte</a> Default: 0
+        * <em>size</em> - Database parameter size. <a href="../Data types">Integer</a> Default: 0
+        * <em>text</em> - Command text. <a href="../Data types">Layout</a> Required.</p>
+<h3 id="sql-statement">SQL Statement</h3>
+<ul>
+<li>
+<p><strong>commandText</strong> - Text of the SQL command to be run on each log level. <a href="../Data types">Layout</a> Required.<br />
+Typically this is a SQL INSERT statement or a stored procedure call. It should use the database-specific parameters (marked as @parameter for SQL server or :parameter for Oracle, other data providers have their own notation) and not the layout renderers, because the latter is prone to SQL injection attacks. The layout renderers should be specified as \<parameter /> elements instead.</p>
+</li>
+<li>
+<p><strong>parameters</strong> - The collection of parameters. Each parameter contains a mapping between NLog layout and a database named or positional parameter. <a href="../Data types">Collection</a><br />
+Each collection item is represented by \<parameter /> element with the following attributes:</p>
+</li>
+<li><em>layout</em> - Layout that should be use to calcuate the value for the parameter. <a href="../Data types">Layout</a> Required.  </li>
+<li><em>name</em> - Database parameter name. Required.</li>
+<li><em>precision</em> - Database parameter precision. <a href="../Data types">Byte</a> Default: 0</li>
+<li><em>scale</em> - Database parameter scale. <a href="../Data types">Byte</a> Default: 0</li>
+<li><em>size</em> - Database parameter size. <a href="../Data types">Integer</a> Default: 0</li>
+</ul>
+<h2 id="example-configurations">Example Configurations</h2>
+<h3 id="sql-server-and-aspnet-example-configuration">SQL Server and ASP.NET Example Configuration</h3>
+<pre><code class="xml">&lt;target name=&quot;database&quot; xsi:type=&quot;Database&quot;&gt;
+  &lt;!--
+  Remarks:
+    The appsetting layouts require the NLog.Extended assembly.
+    The aspnet-* layouts require the NLog.Web assembly.
+    The Application value is determined by an AppName appSetting in Web.config.
+    The &quot;NLogDb&quot; connection string determines the database that NLog write to.
+    The create dbo.Log script in the comment below must be manually executed.
+  --&gt;
+
+  &lt;connectionStringName&gt;NLogDb&lt;/connectionStringName&gt;
+
+  &lt;!--
+  Script for creating the dbo.Log table.
+
+  SET ANSI_NULLS ON
+  SET QUOTED_IDENTIFIER ON
+  CREATE TABLE [dbo].[Log] (
+      [Id] [int] IDENTITY(1,1) NOT NULL,
+      [Application] [nvarchar](50) NOT NULL,
+      [Logged] [datetime] NOT NULL,
+      [Level] [nvarchar](50) NOT NULL,
+      [Message] [nvarchar](max) NOT NULL,
+      [UserName] [nvarchar](250) NULL,
+      [ServerName] [nvarchar](max) NULL,
+      [Port] [nvarchar](max) NULL,
+      [Url] [nvarchar](max) NULL,
+      [Https] [bit] NULL,
+      [ServerAddress] [nvarchar](100) NULL,
+      [RemoteAddress] [nvarchar](100) NULL,
+      [Logger] [nvarchar](250) NULL,
+      [Callsite] [nvarchar](max) NULL,
+      [Exception] [nvarchar](max) NULL,
+    CONSTRAINT [PK_dbo.Log] PRIMARY KEY CLUSTERED ([Id] ASC)
+      WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+  ) ON [PRIMARY]
+  --&gt;
+
+  &lt;commandText&gt;
+    insert into dbo.Log (
+      Application, Logged, Level, Message,
+      Username,
+      ServerName, Port, Url, Https,
+      ServerAddress, RemoteAddress,
+      Logger, CallSite, Exception
+    ) values (
+      @Application, @Logged, @Level, @Message,
+      @Username,
+      @ServerName, @Port, @Url, @Https,
+      @ServerAddress, @RemoteAddress,
+      @Logger, @Callsite, @Exception
+    );
+  &lt;/commandText&gt;
+
+  &lt;parameter name=&quot;@application&quot; layout=&quot;${appsetting:name=AppName:default=Unknown\: set AppName in appSettings}&quot; /&gt;
+  &lt;parameter name=&quot;@logged&quot; layout=&quot;${date}&quot; /&gt;
+  &lt;parameter name=&quot;@level&quot; layout=&quot;${level}&quot; /&gt;
+  &lt;parameter name=&quot;@message&quot; layout=&quot;${message}&quot; /&gt;
+
+  &lt;parameter name=&quot;@username&quot; layout=&quot;${identity}&quot; /&gt;
+
+  &lt;parameter name=&quot;@serverName&quot; layout=&quot;${aspnet-request:serverVariable=SERVER_NAME}&quot; /&gt;
+  &lt;parameter name=&quot;@port&quot; layout=&quot;${aspnet-request:serverVariable=SERVER_PORT}&quot; /&gt;
+  &lt;parameter name=&quot;@url&quot; layout=&quot;${aspnet-request:serverVariable=HTTP_URL}&quot; /&gt;
+  &lt;parameter name=&quot;@https&quot; layout=&quot;${when:inner=1:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}${when:inner=0:when='${aspnet-request:serverVariable=HTTPS}' != 'on'}&quot; /&gt;
+
+  &lt;parameter name=&quot;@serverAddress&quot; layout=&quot;${aspnet-request:serverVariable=LOCAL_ADDR}&quot; /&gt;
+  &lt;parameter name=&quot;@remoteAddress&quot; layout=&quot;${aspnet-request:serverVariable=REMOTE_ADDR}:${aspnet-request:serverVariable=REMOTE_PORT}&quot; /&gt;
+
+  &lt;parameter name=&quot;@logger&quot; layout=&quot;${logger}&quot; /&gt;
+  &lt;parameter name=&quot;@callSite&quot; layout=&quot;${callsite}&quot; /&gt;
+  &lt;parameter name=&quot;@exception&quot; layout=&quot;${exception:tostring}&quot; /&gt;
+&lt;/target&gt;
+</code></pre>
+
+<h3 id="aspnet-and-sql-server-using-a-stored-procedure">ASP.NET and SQL Server using a stored procedure</h3>
+<p>This approach keeps the NLog.config file simpler, and helps confine 
+database logic to the database.</p>
+<h4 id="nlog-target-configuration">NLog target configuration</h4>
+<pre><code class="xml">&lt;target name=&quot;db&quot;
+        xsi:type=&quot;Database&quot;
+        connectionStringName=&quot;NLogConn&quot;
+        commandType=&quot;StoredProcedure&quot;
+        commandText=&quot;[dbo].[NLog_AddEntry_p]&quot;
+        &gt;
+  &lt;parameter name=&quot;@machineName&quot;    layout=&quot;${machinename}&quot; /&gt;
+  &lt;parameter name=&quot;@siteName&quot;       layout=&quot;${iis-site-name}&quot; /&gt;
+  &lt;parameter name=&quot;@logged&quot;         layout=&quot;${date}&quot; /&gt;
+  &lt;parameter name=&quot;@level&quot;          layout=&quot;${level}&quot; /&gt;
+  &lt;parameter name=&quot;@username&quot;       layout=&quot;${aspnet-user-identity}&quot; /&gt;
+  &lt;parameter name=&quot;@message&quot;        layout=&quot;${message}&quot; /&gt;
+  &lt;parameter name=&quot;@logger&quot;         layout=&quot;${logger}&quot; /&gt;
+  &lt;parameter name=&quot;@properties&quot;     layout=&quot;${all-event-properties:separator=|}&quot; /&gt;
+  &lt;parameter name=&quot;@serverName&quot;     layout=&quot;${aspnet-request:serverVariable=SERVER_NAME}&quot; /&gt;
+  &lt;parameter name=&quot;@port&quot;           layout=&quot;${aspnet-request:serverVariable=SERVER_PORT}&quot; /&gt;
+  &lt;parameter name=&quot;@url&quot;            layout=&quot;${aspnet-request:serverVariable=HTTP_URL}&quot; /&gt;
+  &lt;parameter name=&quot;@https&quot;          layout=&quot;${when:inner=1:when='${aspnet-request:serverVariable=HTTPS}' == 'on'}${when:inner=0:when='${aspnet-request:serverVariable=HTTPS}' != 'on'}&quot; /&gt;
+  &lt;parameter name=&quot;@serverAddress&quot;  layout=&quot;${aspnet-request:serverVariable=LOCAL_ADDR}&quot; /&gt;
+  &lt;parameter name=&quot;@remoteAddress&quot;  layout=&quot;${aspnet-request:serverVariable=REMOTE_ADDR}:${aspnet-request:serverVariable=REMOTE_PORT}&quot; /&gt;
+  &lt;parameter name=&quot;@callSite&quot;       layout=&quot;${callsite}&quot; /&gt;
+  &lt;parameter name=&quot;@exception&quot;      layout=&quot;${exception:tostring}&quot; /&gt;
+&lt;/target&gt;
+
+&lt;!--
+  Notes:
+
+  - Some of these layout renderers require a reference to NLog.Web. 
+    (http://nuget.org/List/Packages/NLog.Web)
+
+  - If the connection string was created with Visual Studio's Settings dialog
+    then its name may be prefixed with a namespace like &quot;&lt;project&gt;.Settings.Properties.*&quot;.
+    If so be sure to include the entire name (with the namespace).
+--&gt;
+</code></pre>
+
+<h4 id="sql-scripts-to-set-up-the-database-objects">SQL scripts to set up the database objects</h4>
+<p>Remember to grant permissions on the database objects so that the website can execute the stored procedure.</p>
+<pre><code class="sql">CREATE TABLE [dbo].[NLog] (
+   [ID] [int] IDENTITY(1,1) NOT NULL,
+   [MachineName] [nvarchar](200) NULL,
+   [SiteName] [nvarchar](200) NOT NULL,
+   [Logged] [datetime] NOT NULL,
+   [Level] [varchar](5) NOT NULL,
+   [UserName] [nvarchar](200) NULL,
+   [Message] [nvarchar](max) NOT NULL,
+   [Logger] [nvarchar](300) NULL,
+   [Properties] [nvarchar](max) NULL,
+   [ServerName] [nvarchar](200) NULL,
+   [Port] [nvarchar](100) NULL,
+   [Url] [nvarchar](2000) NULL,
+   [Https] [bit] NULL,
+   [ServerAddress] [nvarchar](100) NULL,
+   [RemoteAddress] [nvarchar](100) NULL,
+   [Callsite] [nvarchar](300) NULL,
+   [Exception] [nvarchar](max) NULL,
+ CONSTRAINT [PK_dbo.Log] PRIMARY KEY CLUSTERED ([ID] ASC) 
+   WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
+
+GO
+
+CREATE PROCEDURE [dbo].[NLog_AddEntry_p] (
+  @machineName nvarchar(200),
+  @siteName nvarchar(200),
+  @logged datetime,
+  @level varchar(5),
+  @userName nvarchar(200),
+  @message nvarchar(max),
+  @logger nvarchar(300),
+  @properties nvarchar(max),
+  @serverName nvarchar(200),
+  @port nvarchar(100),
+  @url nvarchar(2000),
+  @https bit,
+  @serverAddress nvarchar(100),
+  @remoteAddress nvarchar(100),
+  @callSite nvarchar(300),
+  @exception nvarchar(max)
+) AS
+BEGIN
+  INSERT INTO [dbo].[NLog] (
+    [MachineName],
+    [SiteName],
+    [Logged],
+    [Level],
+    [UserName],
+    [Message],
+    [Logger],
+    [Properties],
+    [ServerName],
+    [Port],
+    [Url],
+    [Https],
+    [ServerAddress],
+    [RemoteAddress],
+    [CallSite],
+    [Exception]
+  ) VALUES (
+    @machineName,
+    @siteName,
+    @logged,
+    @level,
+    @userName,
+    @message,
+    @logger,
+    @properties,
+    @serverName,
+    @port,
+    @url,
+    @https,
+    @serverAddress,
+    @remoteAddress,
+    @callSite,
+    @exception
+  );
+END
+</code></pre>
+
+<h3 id="mysql-and-net-core">MySql and .NET Core</h3>
+<p>Installed this package <a href="https://www.nuget.org/packages/MySql.Data/7.0.6-IR31">MySql.Data</a></p>
+<p>with following settings</p>
+<pre><code class="xml">&lt;target name=&quot;database&quot; xsi:type=&quot;Database&quot;
+             dbProvider=&quot;MySql.Data.MySqlClient.MySqlConnection, MySql.Data&quot;
+             connectionString=&quot;server=localhost;Database=*****;user id=****;password=*****&quot;
+             &gt;
+</code></pre></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

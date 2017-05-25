@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>File target - NLog Docs</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../AsyncWrapper-target/">NLog Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">targets <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AsyncWrapper-target/">AsyncWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../AutoFlushWrapper-target/">AutoFlushWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../BufferingWrapper-target/">BufferingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Chainsaw-target/">Chainsaw target</a>
+</li>
+                            
+<li >
+    <a href="../ColoredConsole-target/">ColoredConsole target</a>
+</li>
+                            
+<li >
+    <a href="../Console-target/">Console target</a>
+</li>
+                            
+<li >
+    <a href="../Database-target/">Database target</a>
+</li>
+                            
+<li >
+    <a href="../Debug-target/">Debug target</a>
+</li>
+                            
+<li >
+    <a href="../Debugger-target/">Debugger target</a>
+</li>
+                            
+<li >
+    <a href="../Elmah-target/">Elmah target</a>
+</li>
+                            
+<li >
+    <a href="../Eventlog-target/">Eventlog target</a>
+</li>
+                            
+<li >
+    <a href="../FallbackGroup-target/">FallbackGroup target</a>
+</li>
+                            
+<li class="active">
+    <a href="./">File target</a>
+</li>
+                            
+<li >
+    <a href="../FilteringWrapper-target/">FilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../FormControl-target/">FormControl target</a>
+</li>
+                            
+<li >
+    <a href="../ImpersonatingWrapper-target/">ImpersonatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../Installing-targets/">Installing targets</a>
+</li>
+                            
+<li >
+    <a href="../LimitingWrapper-target/">LimitingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../LogReceiverService-target/">LogReceiverService target</a>
+</li>
+                            
+<li >
+    <a href="../Mail-target/">Mail target</a>
+</li>
+                            
+<li >
+    <a href="../Memory-target/">Memory target</a>
+</li>
+                            
+<li >
+    <a href="../MessageBox-target/">MessageBox target</a>
+</li>
+                            
+<li >
+    <a href="../MethodCall-target/">MethodCall target</a>
+</li>
+                            
+<li >
+    <a href="../MSMQ-target/">MSMQ target</a>
+</li>
+                            
+<li >
+    <a href="../Network-target/">Network target</a>
+</li>
+                            
+<li >
+    <a href="../NLogViewer-target/">NLogViewer target</a>
+</li>
+                            
+<li >
+    <a href="../Null-target/">Null target</a>
+</li>
+                            
+<li >
+    <a href="../OutputDebugString-target/">OutputDebugString target</a>
+</li>
+                            
+<li >
+    <a href="../PerfCounter-target/">PerfCounter target</a>
+</li>
+                            
+<li >
+    <a href="../PostFilteringWrapper-target/">PostFilteringWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RandomizeGroup-target/">RandomizeGroup target</a>
+</li>
+                            
+<li >
+    <a href="../RepeatingWrapper-target/">RepeatingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RetryingWrapper-target/">RetryingWrapper target</a>
+</li>
+                            
+<li >
+    <a href="../RichTextBox-target/">RichTextBox target</a>
+</li>
+                            
+<li >
+    <a href="../RoundRobinGroup-target/">RoundRobinGroup target</a>
+</li>
+                            
+<li >
+    <a href="../SplitGroup-target/">SplitGroup target</a>
+</li>
+                            
+<li >
+    <a href="../Trace-target/">Trace target</a>
+</li>
+                            
+<li >
+    <a href="../WebService-target/">WebService target</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">renderers <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../Basedir-layout-renderer/">Basedir layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-layout-renderer/">Callsite layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Callsite-line-number-layout-renderer/">Callsite line number layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Counter-layout-renderer/">Counter layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Date-layout-renderer/">Date layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../DocumentUri-layout-renderer/">DocumentUri layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Environment-layout-renderer/">Environment layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Exception-layout-renderer/">Exception layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../FileContents-layout-renderer/">FileContents layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gc-layout-renderer/">Gc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Gdc-layout-renderer/">Gdc layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Guid-layout-renderer/">Guid layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Identity-layout-renderer/">Identity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../InstallContext-layout-renderer/">InstallContext layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../Level-layout-renderer/">Level layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../WrapLine-layout-renderer/">WrapLine layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">NLog.Web <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../AspApplication-layout-renderer/">AspApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetApplication-layout-renderer/">AspNetApplication layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetItem-layout-renderer/">AspNetItem layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetRequest-layout-renderer/">AspNetRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSession-layout-renderer/">AspNetSession layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetSessionId-layout-renderer/">AspNetSessionId layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserAuthType-layout-renderer/">AspNetUserAuthType layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspNetUserIdentity-layout-renderer/">AspNetUserIdentity layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspRequest-layout-renderer/">AspRequest layout renderer</a>
+</li>
+                            
+<li >
+    <a href="../AspSession-layout-renderer/">AspSession layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extending <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../How-to-write-a-custom-target/">How to write a custom target</a>
+</li>
+                            
+<li >
+    <a href="../How-to-write-a-custom-layout-renderer/">How to write a custom layout renderer</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../FallbackGroup-target/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../FilteringWrapper-target/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#configuration-syntax">Configuration Syntax</a></li>
+        <li class="main "><a href="#parameters">Parameters</a></li>
+            <li><a href="#general-options">General Options</a></li>
+            <li><a href="#layout-options">Layout Options</a></li>
+            <li><a href="#archival-options">Archival Options</a></li>
+            <li><a href="#output-options">Output Options</a></li>
+            <li><a href="#performance-tuning-options">Performance Tuning Options</a></li>
+        <li class="main "><a href="#examples">Examples</a></li>
+            <li><a href="#simple-logging">Simple logging</a></li>
+            <li><a href="#per-level-log-files">Per-level log files</a></li>
+            <li><a href="#one-log-file-per-day">One log file per day</a></li>
+            <li><a href="#asynchronous-logging">Asynchronous logging</a></li>
+            <li><a href="#creating-comma-separated-log-file-csv">Creating comma-separated log file (CSV)</a></li>
+            <li><a href="#size-based-file-archival">Size-based file archival</a></li>
+            <li><a href="#time-based-file-archival">Time-based file archival</a></li>
+            <li><a href="#archive-numbering-examples">Archive Numbering Examples</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>Writes log messages to one or more files. </p>
+<p>Since NLog 4.3 the <code>${basedir}</code> isn't needed anymore for relative paths.</p>
+<p>Supported in .NET, Silverlight, Compact Framework and Mono.</p>
+<h2 id="configuration-syntax">Configuration Syntax</h2>
+<pre><code class="xml">&lt;targets&gt;
+  &lt;target xsi:type=&quot;File&quot;
+          name=&quot;String&quot;
+          layout=&quot;Layout&quot;
+          header=&quot;Layout&quot;
+          footer=&quot;Layout&quot;
+          encoding=&quot;Encoding&quot;
+          lineEnding=&quot;Enum&quot;
+          archiveAboveSize=&quot;Long&quot;
+          maxArchiveFiles=&quot;Integer&quot;
+          archiveFileName=&quot;Layout&quot;
+          archiveNumbering=&quot;Enum&quot;
+          archiveDateFormat=&quot;String&quot;
+          archiveEvery=&quot;Enum&quot;          
+          archiveOldFileOnStartup=&quot;Boolean&quot;
+          replaceFileContentsOnEachWrite=&quot;Boolean&quot;
+          fileAttributes=&quot;Enum&quot;
+          fileName=&quot;Layout&quot;
+          deleteOldFileOnStartup=&quot;Boolean&quot;
+          enableFileDelete=&quot;Boolean&quot;
+          createDirs=&quot;Boolean&quot;
+          concurrentWrites=&quot;Boolean&quot;
+          openFileCacheTimeout=&quot;Integer&quot;
+          openFileCacheSize=&quot;Integer&quot;
+          networkWrites=&quot;Boolean&quot;
+          concurrentWriteAttemptDelay=&quot;Integer&quot;
+          concurrentWriteAttempts=&quot;Integer&quot;
+          bufferSize=&quot;Integer&quot;
+          autoFlush=&quot;Boolean&quot;
+          keepFileOpen=&quot;Boolean&quot;
+          forceManaged=&quot;Boolean&quot;
+          enableArchiveFileCompression=&quot;Boolean&quot;
+          cleanupFileName=&quot;Boolean&quot;
+          writeFooterOnArchivingOnly=&quot;Boolean&quot;  /&gt;
+&lt;/targets&gt;
+</code></pre>
+
+<p>Read more about using the <a href="../Configuration-file">Configuration File</a>.</p>
+<h2 id="parameters">Parameters</h2>
+<h3 id="general-options">General Options</h3>
+<ul>
+<li>
+<p><strong>name</strong> - Name of the target.</p>
+</li>
+<li>
+<p><strong>forceManaged</strong> - Indicates that the file target should only use managed methods. This disables some of the options.</p>
+</li>
+</ul>
+<h3 id="layout-options">Layout Options</h3>
+<ul>
+<li>
+<p><strong>layout</strong> - Text to be rendered. <a href="../Layouts">Layout</a> Required. Default: <code>${longdate}|${level:uppercase=true}|${logger}|${message}</code></p>
+</li>
+<li>
+<p><strong>header</strong> - Header. <a href="../Layouts">Layout</a>  </p>
+</li>
+<li>
+<p><strong>footer</strong> - Footer. <a href="../Layouts">Layout</a></p>
+</li>
+<li>
+<p><strong>encoding</strong> - File encoding name like "utf-8", "ascii" or "utf-16". See <a href="http://msdn.microsoft.com/en-us/library/system.text.encoding%28v=vs.110%29.aspx">Encoding class on MSDN</a>. Defaults to <code>Encoding.Default</code> (<code>UTF-8</code> on silverlight)</p>
+</li>
+<li>
+<p><strong>lineEnding</strong> - Line ending mode.<br />
+Possible values:</p>
+</li>
+<li>CR - Insert CR character (ASCII 13) after each line.</li>
+<li>CRLF - Insert CR LF sequence (ASCII 13, ASCII 10) after each line.</li>
+<li>Default - Insert platform-dependent end-of-line sequence after each line.</li>
+<li>LF - Insert LF character (ASCII 10) after each line.</li>
+<li>None - Don't insert any line ending.</li>
+</ul>
+<h3 id="archival-options">Archival Options</h3>
+<ul>
+<li>
+<p><strong>archiveAboveSize</strong> - Size in bytes above which log files will be automatically archived. <a href="../Layouts">Long</a><br />
+Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum performance. 
+<strong>Warning: combining this mode with <em>Archive Numbering Date</em> is not supported. Archive files are not merged. <em>DateAndSequence</em> will work</strong></p>
+</li>
+<li>
+<p><strong>maxArchiveFiles</strong> - Maximum number of archive files that should be kept. If <em>maxArchiveFiles</em> is less or equal to 0, old files aren't deleted <a href="../Layouts">Integer</a> Default: 0  </p>
+</li>
+<li>
+<p><strong>archiveFileName</strong> - Name of the file to be used for an archive. <a href="../Layouts">Layout</a><br />
+It may contain a special placeholder {#####} that will be replaced with a sequence of numbers depending on the archiving strategy. The number of hash characters used determines the number of numerical digits to be used for numbering files.<br />
+<strong>warning</strong> when deleting archives files is enabled (e.g. <em>maxArchiveFiles</em> ), the folder of the archives should different than the log files.</p>
+</li>
+<li>
+<p><strong>archiveNumbering</strong> - Way file archives are numbered. See also <a href="#archive-numbering-examples">Archive Numbering Examples</a> <br />
+Possible values:</p>
+</li>
+<li>Rolling - Rolling style numbering (the most recent is always #0 then #1, ..., #N).</li>
+<li>Sequence - Sequence style numbering. The most recent archive has the highest number.</li>
+<li>Date - Date style numbering. The date is formatted according to the value of <em>archiveDateFormat</em>. <strong>Warning: combining this mode with <em>archiveAboveSize</em> is not supported. Archive files are not merged.  </strong></li>
+<li>
+<p>DateAndSequence - Combination of <em>Date</em> and <em>Sequence</em> .Archives will be stamped with the prior period (Year, Month, Day) datetime.
+     The most recent archive has the highest number (in combination with the date). The date is formatted according to the value of <em>archiveDateFormat</em>.</p>
+</li>
+<li>
+<p><strong>archiveEvery</strong> - Indicates whether to automatically archive log files every time the specified time passes.<br />
+Possible values:</p>
+</li>
+<li>Day - Archive daily.</li>
+<li>Hour - Archive every hour.</li>
+<li>Minute - Archive every minute.</li>
+<li>Month - Archive every month.</li>
+<li>None - Don't archive based on time.</li>
+<li>Year - Archive every year.</li>
+<li>Sunday - Archive every Sunday. Introduced in NLog 4.4.4.</li>
+<li>Monday - Archive every Monday. Introduced in NLog 4.4.4.</li>
+<li>Tuesday - Archive every Tuesday. Introduced in NLog 4.4.4.</li>
+<li>Wednesday - Archive every Wednesday. Introduced in NLog 4.4.4.</li>
+<li>Thursday - Archive every Thursday. Introduced in NLog 4.4.4.</li>
+<li>Friday - Archive every Friday. Introduced in NLog 4.4.4.</li>
+<li>
+<p>Saturday - Archive every Saturday. Introduced in NLog 4.4.4.</p>
+<blockquote>
+<p>Files are moved to the archive as part of the write operation if the current period of time changes. For example if &gt; the current hour changes from 10 to 11, the first write that will occur on or after 11:00 will trigger the
+archiving. Caution: Enabling this option can considerably slow down your file logging in multi-process scenarios. If &gt; only one process is going to be writing to the file, consider setting ConcurrentWrites to false for maximum
+performance.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>archiveDateFormat</strong> - Specifies the date format used for archive numbering. Default format depends on the archive period. This option works only when the "ArchiveNumbering" parameter is set to Date or DateAndSequence</p>
+</li>
+<li>
+<p><strong>ArchiveOldFileOnStartup</strong> - Achive old log file on startup.</p>
+</li>
+</ul>
+<h3 id="output-options">Output Options</h3>
+<ul>
+<li>
+<p><strong>replaceFileContentsOnEachWrite</strong> - Indicates whether to replace file contents on each write instead of appending log message at the end. <a href="../Data-types">Boolean</a> Default: False  </p>
+</li>
+<li>
+<p><strong>fileAttributes</strong> - File attributes (Windows only).<br />
+Possible values:</p>
+</li>
+<li>Archive - File should be archived.</li>
+<li>~~Compressed~~ - Compress won't work due to .Net restrictions. You can use enableArchiveFileCompression.</li>
+<li>DeleteOnClose - Delete file after it is closed.</li>
+<li>Device - Device file.</li>
+<li>Encrypted - Encrypted file.</li>
+<li>Hidden - Hidden file.</li>
+<li>NoBuffering - The system opens a file with no system caching.</li>
+<li>Normal - Normal file.</li>
+<li>NotContentIndexed - File should not be indexed by the content indexing service.</li>
+<li>PosixSemantics - A file is accessed according to POSIX rules.</li>
+<li>Readonly - Read-only</li>
+<li>ReadOnly - Read-only file.</li>
+<li>ReparsePoint - Reparse point.</li>
+<li>SparseFile - Sparse file.</li>
+<li>System - System file.</li>
+<li>Temporary - File is temporary (should be kept in cache and not written to disk if possible).</li>
+<li>
+<p>WriteThrough - The system writes through any intermediate cache and goes directly to disk.
+    &gt; This parameter is not supported in:
+    &gt; * Silverlight 4.0</p>
+</li>
+<li>
+<p><strong>fileName</strong> - Name of the file to write to. <a href="../Data-types">Layout</a> Required.<br />
+This FileName string is a layout which may include instances of layout renderers. This lets you use a single target to write to multiple files.<br />
+The following value makes NLog write logging events to files based on the log level in the directory where the application runs. <code>${basedir}/${level}.log</code> All Debug messages will go to <code>Debug.log</code>, all Info messages will go to <code>Info.log</code> and so on. You can combine as many of the layout renderers as you want to produce an arbitrary log file name. Since NLog 4.3 the <code>${basedir}</code> isn't needed anymore for relative paths.</p>
+</li>
+<li>
+<p><strong>deleteOldFileOnStartup</strong> - Indicates whether to delete old log file on startup. <a href="../Data-types">Boolean</a> Default: False. This option works only when the "FileName" parameter denotes a single file.</p>
+</li>
+<li>
+<p><strong>enableFileDelete</strong> - Indicates whether to enable log file(s) to be deleted. <a href="../Data-types">Boolean</a> Default: True  </p>
+</li>
+<li>
+<p><strong>createDirs</strong> - Indicates whether to create directories if they don't exist. <a href="../Data-types">Boolean</a> Default: True<br />
+Setting this to false may improve performance a bit, but you'll receive an error when attempting to write to a directory that's not present.</p>
+</li>
+<li>
+<p><strong>enableArchiveFileCompression</strong> - Indicates whether to compress the archive files into the zip files. <a href="../Data-types">Boolean</a> Default: False
+    &gt; Supported in:
+    &gt; * NLog v4.0 for .NET 4.5</p>
+</li>
+<li>
+<p><strong>writeFooterOnArchivingOnly</strong> - Indicates whether the footer should be written only when the file is archived. If <code>False</code>, the footer will also be written when starting to write to a different file and when the target is closed <a href="../Data-types">Boolean</a> Default: False</p>
+</li>
+</ul>
+<h3 id="performance-tuning-options">Performance Tuning Options</h3>
+<ul>
+<li>
+<p><strong>keepFileOpen</strong> - Indicates whether to keep log file open instead of opening and closing it on each logging event. Changing this property to true will improve performance a lot, but will also keep the file handle locked. Consider setting <em>openFileCacheTimeout</em> = 30 when enabling this, as it will allow archive operations and react to log file being deleted. <a href="../Data-types">Boolean</a> Default: False </p>
+</li>
+<li>
+<p><strong>concurrentWrites</strong> - Enables support for optimized concurrent writes to same log file from multiple processes on the same machine-host, when using <em>keepFileOpen</em> = true. By using a special technique that lets it keep the files open from multiple processes. If only single process (and single AppDomain) application is logging, then it is faster to set to <em>concurrentWrites</em> = False.  <a href="../Data-types">Boolean</a> Default: True</p>
+</li>
+<li>
+<p><strong>openFileCacheTimeout</strong> - Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity. <a href="../Data-types">Integer</a> Default: -1  </p>
+</li>
+<li>
+<p><strong>openFileCacheSize</strong> - Number of files to be kept open. Setting this to a higher value may improve performance in a situation where a single File target is writing to many files (such as splitting by level or by logger). <a href="../Data-types">Integer</a> Default: 5<br />
+The files are managed on a LRU (least recently used) basis, which flushes the files that have not been used for the longest period of time should the cache become full. As a rule of thumb, you shouldn't set this parameter to a very high value. A number like 10-15 shouldn't be exceeded, because you'd be keeping a large number of files open which consumes system resources.</p>
+</li>
+<li>
+<p><strong>optimizeBufferReuse</strong> - Instead of allocating new buffers for every file write and for each layout rendering of log message, then it reuse the same buffers. <a href="../Data-types">Boolean</a> Default: True. Introduced in NLog 4.4.2</p>
+</li>
+<li>
+<p><strong>networkWrites</strong> - Indicates whether concurrent writes to the log file by multiple processes on different network hosts. <a href="../Data-types">Boolean</a> Default: False<br />
+This effectively prevents files from being kept open.</p>
+</li>
+<li>
+<p><strong>concurrentWriteAttemptDelay</strong> - Delay in milliseconds to wait before attempting to write to the file again. <a href="../Data-types">Integer</a> Default: 1<br />
+The actual delay is a random value between 0 and the value specified in this parameter. On each failed attempt the delay base is doubled up to ConcurrentWriteAttempts times.<br />
+Assuming that ConcurrentWriteAttemptDelay is 10 the time to wait will be: a random value between 0 and 10 milliseconds - 1st attempt a random value between 0 and 20 milliseconds - 2nd attempt a random value between 0 and 40 milliseconds - 3rd attempt a random value between 0 and 80 milliseconds - 4th attempt ... and so on.</p>
+</li>
+<li>
+<p><strong>concurrentWriteAttempts</strong> - Number of times the write is appended on the file before NLog discards the log message. <a href="../Data-types">Integer</a> Default: 10  </p>
+</li>
+<li>
+<p><strong>cleanupFileName</strong> - before writing to a file, the name of the file get checked for illegal characters (OS dependent). This can be costly if a lot of messages are written. The cleanup is cached for fixed names (no layout renderers). Set this to <code>false</code> for optimal performance (but beware of the file name, if it's wrong, nothing gets written). Default: <code>true</code>. Introduced in NLog 4.2.3.</p>
+</li>
+<li>
+<p><strong>bufferSize</strong> - Log file buffer size in bytes. <a href="../Data-types">Integer</a> Default: 32768  </p>
+</li>
+<li>
+<p><strong>autoFlush</strong> - Indicates whether to automatically flush the file buffers after each log message. <a href="../Data-types">Boolean</a> Default: True  </p>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="simple-logging">Simple logging</h3>
+<p>The simplest use of File target is to produce single log file. In order to do this, put the following code in the configuration file such as NLog.config. Logs wil be written to logfile.txt in logs directory.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            layout=&quot;${longdate} ${logger} ${message}&quot; 
+            fileName=&quot;${basedir}/logs/logfile.txt&quot; 
+            keepFileOpen=&quot;false&quot;
+            encoding=&quot;iso-8859-2&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="per-level-log-files">Per-level log files</h3>
+<p>Single File target can be used to write to multiple files at once. The following configuration will cause log entries for each log level to be written to a separate file, so you will get:
+ * Trace.log
+ * Debug.log
+ * Info.log
+ * Warn.log
+ * Error.log
+ * Fatal.log</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            layout=&quot;${longdate} ${logger} ${message}&quot; 
+            fileName=&quot;${basedir}/${level}.log&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="one-log-file-per-day">One log file per day</h3>
+<p>The following configuration will create one log file for each day. Log files will be named:
+ * 2010-06-05.log
+ * 2010-06-06.log
+ * 2010-06-07.log
+ * 2010-06-08.log
+ * ...</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            layout=&quot;${longdate} ${logger} ${message}&quot; 
+            fileName=&quot;${basedir}/${shortdate}.log&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="asynchronous-logging">Asynchronous logging</h3>
+<p>Depending on your usage scenario it may be useful to add an AsyncWrapper target the file target. This way all your log messages will be written on a separate thread so your main thread can be unblocked more quickly. Asynchronous logging is recommended for multi-threaded server applications which run for a long time and is not recommended for quickly-finishing command line applications.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;!-- Log in a separate thread, possibly queueing up to
+        5000 messages. When the queue overflows, discard any
+        extra messages--&gt;
+
+        &lt;target name=&quot;file&quot; xsi:type=&quot;AsyncWrapper&quot; queueLimit=&quot;5000&quot; overflowAction=&quot;Discard&quot;&gt;
+            &lt;target xsi:type=&quot;File&quot; fileName=&quot;${basedir}/logs/${level}.txt&quot; /&gt;
+        &lt;/target&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="creating-comma-separated-log-file-csv">Creating comma-separated log file (CSV)</h3>
+<p>In order to create comma-separated files (CSV), use the following configuration, which utilizes CsvLayout. The resulting file will have 4 columns and will be formatted according to CSV rules:</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+    &lt;targets&gt;
+        &lt;target name=&quot;csv&quot; xsi:type=&quot;File&quot; fileName=&quot;${basedir}/file.csv&quot;&gt;
+            &lt;layout xsi:type=&quot;CSVLayout&quot;&gt;
+                &lt;column name=&quot;time&quot; layout=&quot;${longdate}&quot; /&gt;
+                &lt;column name=&quot;message&quot; layout=&quot;${message}&quot; /&gt;
+                &lt;column name=&quot;logger&quot; layout=&quot;${logger}&quot;/&gt;
+                &lt;column name=&quot;level&quot; layout=&quot;${level}&quot;/&gt;
+            &lt;/layout&gt;
+        &lt;/target&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;csv&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="size-based-file-archival">Size-based file archival</h3>
+<p>Log files can be automatically archived by moving them to another location after reaching certain size. The following configuration will create logs/logfile.txt which will be archived to archives/log.000000.txt', archives/log.000001.txt', archives/log.000002.txt' and so on once the main log file reaches 10KB.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            layout=&quot;${longdate} ${logger} ${message}&quot; 
+            fileName=&quot;${basedir}/logs/logfile.txt&quot; 
+            archiveFileName=&quot;${basedir}/archives/log.{#####}.txt&quot;
+            archiveAboveSize=&quot;10240&quot;
+            archiveNumbering=&quot;Sequence&quot;
+            concurrentWrites=&quot;true&quot;
+            keepFileOpen=&quot;false&quot;
+            encoding=&quot;iso-8859-2&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="time-based-file-archival">Time-based file archival</h3>
+<p>Log files can also be automatically archived based on time. This configuration will archive a file at the beginning of each day and will use rolling file naming, so log file from the previous day can always be found in archives//log.0.txt, log from two days ago is in archives//log.1.txt and so on. This configuration will keep at most 7 archive files, so logs older than one week will be automatically deleted.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            layout=&quot;${longdate} ${logger} ${message}&quot; 
+            fileName=&quot;${basedir}/logs/logfile.txt&quot; 
+            archiveFileName=&quot;${basedir}/archives/log.{#}.txt&quot;
+            archiveEvery=&quot;Day&quot;
+            archiveNumbering=&quot;Rolling&quot;
+            maxArchiveFiles=&quot;7&quot;
+            concurrentWrites=&quot;true&quot;
+            keepFileOpen=&quot;false&quot;
+            encoding=&quot;iso-8859-2&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h4 id="archive-every-week">Archive every Week</h4>
+<p>You can specify different archival time periods. For example, if you wanted to archive once a week on Tuesdays,
+you would set <code>archiveEvery="Tuesday"</code>. Possible values for <code>archiveEvery</code> can be found above. This will result in
+the following files being created:
++ logfile.txt           // the current log being written to
++ logfile.20170307.txt
++ logfile.20170314.txt
++ logfile.20170321.txt
++ etc.</p>
+<pre><code class="xml">&lt;?xml version=&quot;1.0&quot; ?&gt;
+&lt;nlog xmlns=&quot;http://www.nlog-project.org/schemas/NLog.xsd&quot;
+      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&gt;
+
+    &lt;targets&gt;
+        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            layout=&quot;${longdate} ${logger} ${message}&quot; 
+            fileName=&quot;${basedir}/logs/logfile.txt&quot; 
+            archiveFileName=&quot;${basedir}/archives/logfile.{#}.txt&quot;
+            archiveEvery=&quot;Tuesday&quot;
+            maxArchiveFiles=&quot;7&quot; /&gt;
+    &lt;/targets&gt;
+
+    &lt;rules&gt;
+        &lt;logger name=&quot;*&quot; minlevel=&quot;Debug&quot; writeTo=&quot;file&quot; /&gt;
+    &lt;/rules&gt;
+&lt;/nlog&gt;
+</code></pre>
+
+<h3 id="archive-numbering-examples">Archive Numbering Examples</h3>
+<h4 id="rolling">Rolling</h4>
+<pre><code class="xml">        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            ...
+            fileName=&quot;file.txt&quot;
+            archiveFileName=&quot;log.{####}.txt&quot;
+            archiveNumbering=&quot;Rolling&quot;  /&gt;
+
+</code></pre>
+
+<p>Example of file names (newest files first):</p>
+<ul>
+<li>file.txt</li>
+<li>log.0000.txt</li>
+<li>log.0001.txt</li>
+<li>log.0002.txt</li>
+</ul>
+<h4 id="sequence">Sequence</h4>
+<pre><code class="xml">        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            ...
+            fileName=&quot;file.txt&quot;
+            archiveFileName=&quot;log.{####}.txt&quot;
+            archiveNumbering=&quot;Sequence&quot;  /&gt;
+
+</code></pre>
+
+<p>Example of file names (newest files first):</p>
+<ul>
+<li>file.txt</li>
+<li>log.0002.txt</li>
+<li>log.0001.txt</li>
+<li>log.0000.txt</li>
+</ul>
+<h4 id="date">Date</h4>
+<pre><code class="xml">        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            ...
+            fileName=&quot;file.txt&quot;
+            archiveFileName=&quot;log.{#}.txt&quot;
+            archiveNumbering=&quot;Date&quot;
+            archiveEvery=&quot;Day&quot;
+            archiveDateFormat=&quot;yyyyMMdd&quot;
+  /&gt;
+
+</code></pre>
+
+<p>Example of file names (newest files first):</p>
+<ul>
+<li>file.txt</li>
+<li>log.20150731.txt</li>
+<li>log.20150730.txt</li>
+</ul>
+<h4 id="dateandsequence">DateAndSequence</h4>
+<pre><code class="xml">        &lt;target name=&quot;file&quot; xsi:type=&quot;File&quot;
+            ...
+            fileName=&quot;file.txt&quot;
+            archiveFileName=&quot;log.{#}.txt&quot;
+            archiveNumbering=&quot;DateAndSequence&quot;
+            archiveAboveSize=&quot;1000&quot;
+            archiveDateFormat=&quot;yyyyMMdd&quot;
+  /&gt;
+
+</code></pre>
+
+<p>Example of file names (newest files first):</p>
+<ul>
+<li>file.txt</li>
+<li>log.20150730.3.txt</li>
+<li>log.20150730.2.txt</li>
+<li>log.20150730.1.txt</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
